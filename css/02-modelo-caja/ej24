@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="">
+        <title>Modelo de caja | Ancho y alto de la caja</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Modelo de caja</h1>
+        </header>
+        <main>
+            <h2>Ancho y alto en la caja</h2>
+
+            <section>
+                <h3>Elementos de bloque</h3>
+
+                <p class="bloque">strong</p> 
+                <strong>Soy un párrafo y, como tal, soy un elemento de bloque.</strong> Lorem ipsum dolor, sit amet. Numquam expedita placeat quia cumque rem <span>architecto</span> atque, sint voluptate aut pariatur sunt beatae autem itaque! Obcaecati ipsa corrupti recusandae doloremque illo.</p>
+            </section>
+
+            <section>
+                <h3>Elementos de línea</h3>
+
+                <span>Yo soy un span, no tengo significado semántico y soy un elemento en línea.</span> <a href="#" class="en-linea">Soy un enlace y un elememnto en línea.</a> <span>Yo también soy un span</span>.
+            </section>
+        </main>
+        <footer>Curso CSS</footer>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- + index.html -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ejemplos de BEM</title>
+        <link rel="stylesheet" href="assets/style/style.css" />
+    </head>
+    <body>
+        <!-- ! La etiqueta aria-labeledby enlaza el h1 mediante su id. Es un ejemplo de accesibilidad 
+             ! para los lectores de pantalla -->
+        <header aria-labelledby="titula-pagina">
+            <h1 id="titulo-pagina">CSS BEM</h1>
+        </header>
+        <main aria-labelledby="seccion-principal">
+            <h2 id="seccion-principal">Ejemplos de CSS BEM</h2>
+
+            <!-- + EJEMPLO BEM BÁSICO -->
+            <section aria-labelledby="ejemplo-1">
+                <h3 id="ejemplo-1">Ejemplo 1</h3>
+
+                <p>Ejemplo de tarjeta con imagen, texto y botón readlizada con CSS BEM</p>
+
+                <div class="contenedor-caso-1">
+                    <!-- TODO: Aquí irá una tarjeta BEM -->
+
+                    <div class="card">
+                        <img class="card__image" src="https://picsum.photos/300/150" alt="Imagen Aleatoria" />
+
+                        <h4 class="card__title">Explora el mundo</h4>
+                        <p class="card__description">Las mejores aventuras comienzan con una buena planificación. Descubre lugares únicos y vive experiencias inolvidables.</p>
+
+                        <!-- + las anclas representan los botones -->
+                        <a class="card__button" href="#">Descubrir más</a>
+                        <a class="card__button card__button--secundary" href="#">Compartir</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- + EJEMPLO BEM AVANZADO -->
+            <section aria-labelledby="ejemplo-2">
+                <h3 id="ejemplo-2">Ejemplo 2</h3>
+
+                <p>Ejemplo de tarjeta con imagen, texto y botón readlizada con CSS BEM</p>
+
+                <div class="contenedor-caso-2">
+                    <!-- TODO: Aquí irá una tarjeta BEM -->
+                    <div class="card-profile">
+                        <header class="card-profile__header">
+                            <img class="card-profile__avatar" src="https://i.pravatar.cc/100?img=29" alt="Imagen de L. M." />
+                            <div class="card-profile__info">
+                                <h4 class="card-profile__name">Laura Martínez</h4>
+                                <p class="card-profile__role">Desarrolladora front-end</p>
+                            </div>
+                        </header>
+
+                        <div class="card-profile__body">
+                            <!-- TODO -->
+                            <p>apasionada del diseño accesible con experiencia en interfases modernas Lorem ipsum dolor sit</p>
+                            <ul>
+                                class= "card-profile_skill">
+                                <li>HTML</li>
+                                <li>css</li>
+                                <li>Javascript</li>
+                                <li>accesibilidad</li>
+                            </ul>
+                        </div>
+                        <footer class="card-profile__footer">
+                            <button class="card-profile_button--primary">ver portfolio</button>
+                            <button class="card-profile_button--secondary"></button>
+                            <!-- TODO -->
+                            Lorem, ipsum dolor.
+                        </footer>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Curso CSS BEM</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contexto de apilamiento (stacking context)</title>
+        <link rel="stylesheet" href="assets/style/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Contexto de apilamiento (stackng context)</h1>
+        </header>
+        <main>
+            <div class="caja caja-verde">
+                <em>Soy la caja verde</em><br />
+                Soy un elemento posicionado con <code>z-index</code> &ge; 1. <br />
+                Estoy sobre la caja naranja.
+            </div>
+
+            <div class="caja caja-naranja">
+                <em>Soy la caja naranja</em><br />
+                Soy un elemento posicionado sin <code>z-index</code> declarado o con <code>z-index: auto</code>. <br />
+                Estoy sobre la caja azul.
+            </div>
+
+            <div class="caja caja-azul">
+                <em>Soy la caja azul</em><br />
+                Soy un elemento no posicionado. <br />
+                Estoy sobre la caja roja.
+            </div>
+
+            <div class="caja caja-roja">
+                <em>Soy la caja roja</em><br />
+                Soy un elemento posicionado con <code>z-index</code> &lt; 0. <br />
+                Estoy debajo de todas las demás.
+            </div>
+        </main>
+
+        <footer>Curso CSS</footer>
+    </body>
+</html>

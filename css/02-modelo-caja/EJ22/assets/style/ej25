@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assts/style/style.assts" />
+        <title>Modelo de caja | Box-sizing</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Modelo de caja</h1>
+        </header>
+        <main>
+            <h2>Box-sizing</h2>
+            <section>
+                <h3>content-box</h3>
+
+                <p class="caja azul">
+                    <strong>Caja 1</strong><br />box-sizing : content-box;<br />
+                    Anchura total = <code>width</code> = 400
+                </p>
+
+                <p class="caja azul caja-2">
+                    <strong>Caja 2</strong><br />box-sizing : content-box;<br />
+                    Anchura total = <code>width</code> + 2 x <code>margin</code> = 400 + 2 x 30 = 460
+                </p>
+
+                <p class="caja azul caja-3">
+                    <strong>Caja 3</strong><br />box-sizing : content-box;<br />
+                    Anchura total = <code>width</code> + 2 x <code>padding</code> = 400 + 2 x 30 = 460
+                </p>
+
+                <p class="caja azul caja-4">
+                    <strong>Caja 4</strong><br />box-sizing : content-box;<br />
+                    Anchura total = <code>width</code> + 2 x <code>margin</code> + 2 x <code>padding</code> = 400 + 2 x 30 + 2 x 30 = 520
+                </p>
+            </section>
+
+            <section>
+                <h3>border-box</h3>
+                <p class="caja verde caja-5">
+                    <strong>Caja 5</strong><br />box-sizing : border-box;<br />
+                    Anchura total = <code>width</code> = 400
+                </p>
+
+                <p class="caja verde caja-6">
+                    <strong>Caja 6</strong><br />box-sizing : border-box;<br />
+                    Anchura total = <code>width</code> = 400
+                </p>
+
+                <p class="caja verde caja-7">
+                    <strong>Caja 7</strong><br />box-sizing : border-box;<br />
+                    Anchura total = <code>width</code> = 400
+                </p>
+
+                <p class="caja verde caja-8">
+                    <strong>Caja 8</strong><br />box-sizing : border-box;<br />
+                    Anchura total = <code>width</code> = 400
+                </p>
+            </section>
+        </main>
+        <footer>Curso CSS</footer>
+    </body>
+</html>

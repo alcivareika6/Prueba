@@ -1,0 +1,229 @@
+/* :root es el selector que apunta a <html> */
+:root {
+    /* VARIABLES CSS (Custom Properties):
+       Permiten centralizar valores. Si cambias el color primario aquí, 
+       se actualizará en todo el documento. Facilita el mantenimiento y el "Theming".
+    */
+    --color-fondo: #fdfcfb;
+    --color-texto: #1b1c1e;
+    --color-primario: #376df5;
+    --color-secundario: #94b1fc;
+    --color-resaltado: #94b1fc;
+    --color-footer: #2b2b2b;
+    --color-footer-texto: #e0e0e0;
+    --color-linea: #333;
+
+    --fuente-base: "Segoe UI", Roboto, sans-serif;
+    --radio: 0.75rem;
+    --sombra: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Evita que bordes y paddings modifiquen el tamaño de un elemento */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-base);
+    line-height: 1.5;
+}
+
+header {
+    padding: 2rem 1rem;
+    border-bottom: 5px solid var(--color-resaltado);
+    background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--radio);
+    background-color: white;
+    box-shadow: var(--sombra);
+}
+
+h2 {
+    margin-bottom: 2rem;
+    color: var(--color-primario);
+    font-size: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 5px solid var(--color-secundario);
+    border-radius: var(--radio);
+    background-color: var(--color-fondo);
+}
+
+h3 {
+    color: var(--color-secundario);
+    font-size: 1.2rem;
+}
+
+h3,
+h3 + p {
+    /* Forzamos que el título y el párrafo hermano estén alineados. */
+    display: inline;
+}
+
+.contenedor-caso-1,
+.contenedor-caso-2 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid black;
+    background-color: white;
+}
+
+/* + CSS BEM del ejercicio 1 */
+/* * Bloque principal */
+.card {
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid var(--color-linea);
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.card__image {
+    width: 100%;
+}
+
+.card__title {
+    margin-bottom: 0.5rem;
+    color: var(--color-primario);
+    font-size: 2rem;
+}
+
+.card__description {
+    color: var(--color-texto);
+}
+
+.card__button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-primario);
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.card__button--secundary {
+    background-color: var(--color-secundario);
+}
+/*  Elementos del bloque */
+
+.card__button:hover {
+    background-color: #092469;
+}
+
+/* + fin del ejercicio 1 *\
+
+/* + CSS BEM del ejerciio 2 avanzado con flexbox */
+
+/* * bloque principal */
+.card-profile { 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid beige;
+    background-color: #fdfcfb;
+    box-shadow: var(--sombra);
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #e5e5f7;
+background-color: #e5e5f7;
+opacity: 0.8;
+background-image:  linear-gradient(30deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(150deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(30deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(150deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(60deg, #7cccf977 25%, transparent 25.5%, transparent 75%, #7cccf977 75%, #7cccf977), linear-gradient(60deg, #7cccf977 25%, transparent 25.5%, transparent 75%, #7cccf977 75%, #7cccf977);
+background-size: 20px 35px;
+background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+
+}
+
+
+/* * Elementos principales */
+.card-profile_header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: #e5e5f7;
+opacity: 0.8;
+background-image:  linear-gradient(30deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(150deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(30deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(150deg, #7cccf9 12%, transparent 12.5%, transparent 87%, #7cccf9 87.5%, #7cccf9), linear-gradient(60deg, #7cccf977 25%, transparent 25.5%, transparent 75%, #7cccf977 75%, #7cccf977), linear-gradient(60deg, #7cccf977 25%, transparent 25.5%, transparent 75%, #7cccf977 75%, #7cccf977);
+background-size: 20px 35px;
+background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;S
+}
+.card-profile_info {
+flex-grow: 1; /* Extender el elemento hasta abarcar todo el espacio restante.*/
+}
+
+.card-profile_avatar{
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--color-linea);
+    BORDER - border-radius: 50%s                                                                                                                                                           ;
+}
+.card-profile_name {
+    color: var(--color-primario);
+    font-size: 1.25rem;
+
+}
+.card-profile_role {
+    color: var(--color-texto);
+    font-size: 0.85rem;
+
+
+}
+.card-profile_body {
+    display: ;
+    color: var(--color-texto);
+}
+.card-profile_blographl {
+color: var(--color-texto);
+
+
+}
+.card-profile_skills{
+
+display:flex
+flex-direction:row
+flex -wrap: wrrap
+
+
+}
+.card-profile_skill{
+background-color: var(--color-secundario);
+border-radius: 0.5rem;
+color: firebrick;
+padding: 0.3rem;
+background-color: var(--color-secundario);
+color: wrap;
+gap: 1rem;
+list-style: none;
+}
+.card-profile_footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: ;
+    background-color: var(--color-footer);
+}

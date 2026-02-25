@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index | "El problema de los padres y los hijos"</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+  <header>
+    <h1><code>z-index</code> | "El problema de los padres y los hijos"</code></h1>
+  </header>
+  <main>
+    <h2>¿Cómo hacer para que el padre se coloque sobre el hijo?</h2>
+    
+    <section>
+
+      <p>
+        Método 1 (no funciona): Modificando el <code>z-index</code> del padre.<br><em>Este método no funciona</em> El padré no puede
+        núnca colocarse por encima del hijo.
+      </p>
+      
+      <div class="contenedor-rojo">
+        Soy el contenedor rojo, padre de la caja azul.
+
+        <div class="caja-azul">
+          Soy la caja azul, hija del contenedor rojo
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      
+      <p>
+        Método 2 (sí funciona): Modificando el <code>z-index</code> del hijo.<br><em>Así sí funciona</em>.
+      </p>
+      <p>
+        Condición indispensable: Para que esto funcione, el contenedor no puede estar posicionado teniendo un
+        <code>z-index</code> distinto de <code>auto</code> u omitido.
+      </p>
+      
+      <div class="contenedor-verde">
+        Soy el contenedor verde, tengo un poco de transparencia y soy el padre de la caja marilla.
+        
+        <div class="caja-amarilla">
+          Soy la caja amarilla, hija del contenedor verde
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+  
+  <footer>
+    Curso CSS
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ejemplo de Página Semántica sin HTML5 outline</title>
+        <style>
+            /* --- CONFIGURACIÓN GENERAL Y ANIMACIONES --- */
+            :root {
+                --bg-color: #f8f9fa;       /* Blanco humo suave */
+                --card-bg: #ffffff;        /* Blanco puro */
+                --text-main: #4a4a4a;      /* Gris oscuro para lectura */
+                --text-muted: #6c757d;     /* Gris medio */
+                --accent: #7b8da4;         /* Azul acero suave */
+                --accent-light: #e2e8f0;   /* Azul muy pálido para fondos */
+                --highlight: #dbeafe;      /* Azul claro para código */
+            }
+
+            @keyframes aparecerSuave {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                background-color: var(--bg-color);
+                color: var(--text-main);
+                line-height: 1.7;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* --- HEADER Y TÍTULO PRINCIPAL --- */
+            header {
+                background-color: var(--card-bg);
+                padding: 3rem 1rem;
+                text-align: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+                animation: aparecerSuave 0.8s ease-out;
+            }
+
+            /* ! h1  ******************************************** */
+            h1 {
+                font-family: 'Georgia', serif; /* Toque elegante */
+                color: #2d3748;
+                font-weight: normal;
+                margin: 0;
+                font-size: 2.2rem;
+                letter-spacing: -0.5px;
+            }
+
+            /* --- NAVEGACIÓN --- */
+            nav {
+                background-color: var(--card-bg);
+                border-bottom: 1px solid var(--accent-light);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            li {
+                padding: 1rem 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--text-muted);
+                font-weight: 500;
+                font-size: 0.95rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+                padding-bottom: 5px;
+                border-bottom: 2px solid transparent;
+            }
+
+            a:hover {
+                color: var(--accent);
+                border-bottom-color: var(--accent);
+            }
+
+            /* --- CONTENIDO PRINCIPAL --- */
+            main {
+                max-width: 800px;
+                margin: 3rem auto;
+                padding: 0 2rem;
+                animation: aparecerSuave 1s ease-out;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+                font-size: 1.05rem;
+            }
+
+            strong {
+                color: #2d3748;
+                font-weight: 700;
+            }
+
+            em {
+                color: var(--accent);
+                font-style: italic;
+            }
+
+            code {
+                background-color: var(--highlight);
+                color: #1e3a8a;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'Consolas', monospace;
+                font-size: 0.9em;
+            }
+
+            /* Corrección para la etiqueta <bloquote> del HTML original */
+            bloquote {
+                display: block; /* Forzamos bloque porque no es estándar */
+                margin: 2rem 0;
+                padding: 1.5rem 2rem;
+                border-left: 4px solid var(--accent);
+                background-color: white;
+                font-family: 'Georgia', serif;
+                font-style: italic;
+                color: #555;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+                border-radius: 0 8px 8px 0;
+            }
+
+            /* --- SECCIONES Y ARTÍCULOS --- */
+            section {
+                margin-top: 4rem;
+                padding-top: 2rem;
+                border-top: 1px dashed var(--accent-light);
+            }
+
+            /* ! h2  ******************************************** */
+            h2 {
+                font-family: 'Georgia', serif;
+                color: var(--accent);
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+                position: relative;
+                display: inline-block;
+            }
+
+            article {
+                background-color: var(--card-bg);
+                padding: 2rem;
+                margin-bottom: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border: 1px solid transparent;
+            }
+
+            article:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+                border-color: var(--accent-light);
+            }
+
+            /* ! h3  ******************************************** */
+            h3 {
+                margin-top: 0;
+                color: #2d3748;
+                font-size: 1.3rem;
+            }
+
+            /* --- FOOTER --- */
+            footer {
+                text-align: center;
+                padding: 3rem;
+                margin-top: 4rem;
+                background-color: #f1f3f5;
+                color: var(--text-muted);
+                font-size: 0.9rem;
+            }
+        </style>
+        </style>
+    </head>
+    <body>
+        <header>
+            <!-- + h1 -->
+            <h1>Mi Sitio Web Semántico sin HTML5 outline</h1>
+            <p>Damos un pasito para atrás.</p>
+            
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre mí</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <p>En el estándar HTML5 se consideró la idea de que se usaran varios <code>&lt;h1></code> independientes por página basados en el llamado “outline algorithm” de secciones.</p>
+
+            <p>Ese algoritmo sí se propuso entre 2008 y 2010, y sobre esa base se popularizó la idea de “un <code>&lth1></code> por section o article”. Se consideraba válido (e incluso correcto) tener múltiples <code>&lt;h1></code> en una misma página, cada uno como encabezado principal de su sección.</p>
+
+            <p>El estándar decía: "No te preocupes por los niveles (h2, h3), usa siempre h1 dentro de las secciones". Esto era genial para la portabilidad: podías coger un <code>&lt;article></code> de una página, pegarlo en otra, y no tenías que reescribir los h2 a h3. Si además el desarrollador utilizaba CSS BEM, que por esas fechas estaba eclosionando, “outline algorithm” aportaba aún más poder para la reutilización del códico.</p>
+
+            <p><strong>La realidad</strong></p>
+
+            <p>Lamentablemente, ningún navegador principal (Chrome, Firefox, Safari) ni los lectores de pantalla (como JAWS o NVDA) implementaron este algoritmo correctamente. Esto afecta a la accesibilidad del código.</p>
+
+            <p>Debido a este fracaso en la implementación, el estándar se ha actualizado. Nota del estándar actual:</p>
+            <bloquote> "No hay implementaciones del algoritmo de esquema... Por lo tanto, se aconseja a los autores usar títulos de rango correcto (h1-h6) para transmitir la estructura del documento." </bloquote>
+
+            <p><em>Siendo que la comunidad no ha aceptado “outline algorithm”, el código basado en CSS BEM es un poco menos portable.</em></p>
+            <!-- + SECCIÓN "Sobre mí" -->
+
+            <section id="sobre">
+                <!-- + h2 -->
+                <h2>Sobre Mí</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin non risus non tortor maximus pretium.</p>
+            </section>
+
+            <!-- + SECCIÓN  "Blog" -->
+
+            <section id="blog">
+                <!-- + h2 -->
+                <h2>Últimos Artículos</h2>
+
+                <!-- * ARTICULO -->
+                <article>
+                    <!-- + h3 -->
+                    <h3>Artículo 1: Introducción al HTML5</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget diam id enim dapibus sagittis vitae ac lorem.</p>
+                </article>
+
+                <!-- * ARTICULO -->
+                <article>
+                    <!-- + h3 -->
+                    <h3>Artículo 2: CSS Moderno y Responsive</h3>
+
+                    <p>Curabitur vulputate sem quis dolor dapibus, non commodo augue sollicitudin. Fusce id diam varius, efficitur magna ut, dictum elit.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Mi Sitio Web Semántico. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

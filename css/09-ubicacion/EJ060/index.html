@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendación sobre z-index</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Recomendación sobre z-index</code></h1>
+  </header>
+  <main>
+    <p>Es recomendable numerar los <code>z-index</code> con saltos de 10 en 10. De este modo, si tenemos que insertar un nuevo elemento con un <code>z-index</code> intermedio, no tendremos que renumerar todos los <code>z-index</code>.</p>
+
+    <div class="caja caja-roja caja-1">
+      <strong>Soy la caja 1</strong> | <code>z-index = 30</code>
+    </div>
+    
+    <div class="caja caja-blanca caja-2">
+      <strong>Soy la caja 2</strong> | <code>z-index = 20</code>
+    </div>
+    
+    <div class="caja caja-roja caja-3">
+      <strong>Soy la caja 3</strong> | <code>z-index = 10</code>
+    </div>
+
+    <div class="caja caja-blanca caja-4">
+      <strong>Soy la caja 4</strong> | <code>z-index</code> omitido. Equivale a <code>z-index = auto</code>. <br>
+      Mi orden de apilamiento se ve modificado por el <code>z-index</code> de la caja-3.
+    </div>
+
+  </main>
+  <footer>
+    Curso CSS
+  </footer>
+</body>
+
+</html>

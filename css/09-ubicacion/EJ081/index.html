@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desplazamiento por márgenes</title>
+        <link rel="stylesheet" href="assets/style/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Desplazamiento por márgenes</h1>
+        </header>
+        <main>
+            <section class="caso-1">
+                <h3>CASO 1</h3>
+                <div class="caja-roja">
+                    <p>
+                        <strong>Soy una caja roja</strong><br />
+                        Estoy posicionada.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque numquam ipsam molestiae sed accusamus.</p>
+                </div>
+                <div class="caja-blanca">
+                    <p>
+                        <strong>Soy una caja blanca</strong><br />
+                        Estoy posicionada y desplazada con top y left.
+                    </p>
+                    <p>Por el contexto de apilamiento (stacking context) estoy sobre la caja roja.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis, vitae quos explicabo molestias nisi veritatis doloremque totam minima, officia quam enim cupiditate id. Itaque neque nobis amet ducimus tempora!</p>
+                </div>
+            </section>
+
+            <section class="caso-2">
+                <h3>CASO 2</h3>
+                <div class="caja-roja">
+                    <p>
+                        <strong>Soy una caja roja</strong><br />
+                        Estoy posicionada.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque numquam ipsam molestiae sed accusamus.</p>
+                </div>
+                <div class="caja-blanca">
+                    <p>
+                        <strong>Soy una caja blanca</strong><br />
+                        No estoy posicionada y, a pesar de ello, estoy desplazada. El truco está en mis márgenes superior izquierdo.
+                    </p>
+                    <p>Como no estoy posicionada, por el contexto de apilamiento (stacking context) estoy debajo de la caja roja.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis, vitae quos explicabo molestias nisi veritatis doloremque totam minima, officia quam enim cupiditate id. Itaque neque nobis amet ducimus tempora!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>Curso CSS</footer>
+    </body>
+</html>

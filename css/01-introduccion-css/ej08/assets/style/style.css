@@ -1,0 +1,32 @@
+/* CASO 7 Especificidad: 0,1,1,2 */
+article div#caja-color.caja-color {
+    background-color: aquamarine;
+}
+/* CASO 6 Especificidad: 0,1,1,1 */
+div#caja-color.caja-color {
+    background-color: cyan;
+}
+/* CASO 5 Especificidad: 0,1,0,2 */
+article div#caja-color {
+    background-color: red;
+}
+/* CASO 4 Especificidad: 0,1,0,1 */
+div#caja-color {
+    background-color: blueviolet;
+}
+/* CASO 3 Especificidad: 0,1,0,0 */
+#caja-color {
+    background-color: rgb(0, 107, 123);
+}
+/* CASO 2 Especificidad: 0,0,1,0 */
+.caja-color {
+    background-color: blue;
+}
+/* CASO 1 Especificidad: 0,0,0,1 */
+div {
+    background-color: orange !important;
+}
+/* CASO 0 Especificidad: 0,0,0,0 */
+* {
+    background-color: #c5dbe4;
+}

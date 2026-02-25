@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- + index.html -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>formularios</title>
+    </head>
+    <body>
+        <h1>Formularios</h1>
+
+        <!-- + CASO 1. Estructura básica y caja de texto -->
+        <h2>Estructura básica y caja de texto</h2>
+
+        <!-- TODO 1 -->
+        <form action="ejemplo.php" method="post">
+            <label for="nombre-completo">Nombre y apellidos</label>
+            <input type="text" id="nombre-completo" />
+        </form>
+ 
+        <!-- + ----------------------------------
+        + CASO 2. Campo de mail y placeolder -->
+        <h2>Campo de mail y placeolder</h2>
+
+        <form class="formulario" action="ejemplo.php" method="post">
+            <!-- TODO 2 -->
+            <input type="email" id="correo" name="correo" placeholder="Introduce un correo electrónico" />
+        </form>
+
+        <!-- + ----------------------------------
+        + CASO 3. Fieldset -->
+        <h2>Fieldset</h2>
+
+        <form class="formulario" action="ejemplo.php" method="post">
+            <!-- TODO 3 -->
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" />
+
+                <label for="ape1">Primer apellido</label>
+                <input type="text" id="ape1" />
+
+                <label for="ape2">Segundo apellido</label>
+                <input type="text" id="ape2" />
+            </fieldset>
+        </form>
+
+        <!-- + ----------------------------------
+        + CASO 4. Ejemplo completo -->
+        <h2>ejemplo completoo</h2>
+
+        <form class="formulario" action="/enviar" method="post" aria-label="Formulario de contacto">
+            <!-- TODO 4 -->
+             <label for="">nombre-completo</label>
+             <intut>type="text" id= "nombre"</intut>
+             <label for="correo electrónico"></label>
+             <intut type = " email" id= "correo"/></intut>
+             <label for="asunto"></label>
+             <intut> type = "text"id="asunto"/></intut>
+             <label for="mensaje ">mensaje</label>
+             <textarea name="mensaje" id="mensaje"rows="5"required<>/textarea>
+             <br>
+             <button type ="submit">enviar</button> 
+        </form>
+    </body>
+</html>
+

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modelo de caja | Colapso de márgenes</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Modelo de caja</h1
+        </header>
+        <main>
+            <h2>Colapso de márgenes</h2>
+
+            <p>Earum doloremque ad sint aspernatur corporis unde, <span>accusantium</span> optio labore, nisi fuga quisquam ipsa repellendus! Officiis cum deleniti repellat aspernatur cupiditate ad maxime ipsum beatae quia? Tenetur harum consectetur voluptatibus.</p>
+
+            <p class="parrafo-2"><strong>Este es el párrafo 2</strong>. Lorem ipsum dolor, sit amet <strong>consectetur adipisicing elit</strong>. Numquam expedita placeat quia cumque rem <span>architecto</span> atque, sint voluptate aut pariatur sunt beatae autem itaque! Obcaecati ipsa corrupti recusandae doloremque illo.</p>
+
+            <p class="parrafo-3"><strong>Este es el párrafo 3</strong>. Earum doloremque ad sint aspernatur corporis unde, <span>accusantium</span> optio labore, nisi fuga quisquam ipsa repellendus! Officiis cum deleniti repellat aspernatur cupiditate ad maxime ipsum beatae quia? Tenetur harum consectetur voluptatibus.</p>
+
+            <p>Earum doloremque ad sint aspernatur corporis unde, <span>accusantium</span> optio labore, nisi fuga quisquam ipsa repellendus! Officiis cum deleniti repellat aspernatur cupiditate ad maxime ipsum beatae quia? Tenetur harum consectetur voluptatibus.</p>
+        </main>
+        <footer>Curso CSS</footer>
+    </body>
+</html>

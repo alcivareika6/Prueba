@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>El problema del hermano adyacente</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>El problema del hermano adyacente</h1>
+        </header>
+        <main>
+            <h2>¿Cómo hacer para que el hermano adyacente se coloque sobre su hermano anterior?</h2>
+
+            <section class="caso-1">
+                <h4>CASO 1</h4>
+                <p>El hermano adyacente se coloca entre el elemento y el contenido de este.</p>
+                <div class="elemento">
+                    <strong>Soy un elemento</strong> <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis, vitae quos explicabo molestias nisi veritatis doloremque totam minima, officia quam enim cupiditate id. Itaque neque nobis amet ducimus tempora!
+                </div>
+
+                <div class="hermano hermano-adyacente">
+                    <strong>Hermano adyacente</strong><br />
+                    Soy el primer hermano o hermano adyacente del elemento blanco. Estoy solapado con el elemento, pero como no estoy posicionado me veo así de raro (entre el elemento y los elementos contenidos en él).
+                </div>
+
+                <div class="hermano">
+                    <strong>Hermano</strong><br />
+                    Soy otro hermano.
+                </div>
+            </section>
+
+            <section class="caso-2">
+                <h4>CASO 2</h4>
+                <p>El hermano adyacente se coloca sobre el elemento.</p>
+                <div class="elemento">
+                    <strong>Soy un elemento</strong><br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis, vitae quos explicabo molestias nisi veritatis doloremque totam minima, officia quam enim cupiditate id. Itaque neque nobis amet ducimus tempora!
+                </div>
+
+                <div class="hermano hermano-adyacente">
+                    <strong>Hermano adyacente</strong><br />
+                    Soy el primer hermano o hermano adyacente del elemento blanco. Estoy solapado con el elemento correctamente. Me encuentro sobre él.
+                </div>
+
+                <div class="hermano">
+                    <strong>Hermano</strong><br />
+                    Soy otro hermano.
+                </div>
+            </section>
+        </main>
+
+        <footer>Curso CSS</footer>
+    </body>
+</html>

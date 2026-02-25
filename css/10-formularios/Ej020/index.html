@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulario competo</title>
+        <link rel="stylesheet" href="./assets/style/style.css" />
+    </head>
+    <body>
+        <form class="formulario-flex" action="/enviar" method="post" aria-label="Formulario de contacto" enctype="multipart/form-data">
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="nombre">Nombre completo:</label>
+                <input class="formulario-flex__input" type="text" id="nombre" name="nombre" autocomplete="name" required />
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="edad">Edad:</label>
+                <input class="formulario-flex__input" type="number" id="edad" name="edad" min="18" max="110" step="1" />
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="nacionalidad">Nacionalidad:</label>
+                <select class="formulario-flex__input" name="nacionalidad" id="nacionalidad">
+                    <option value="de">Alemania</option>
+                    <option value="es">España</option>
+                    <option value="fr">Francia</option>
+                    <option value="it">Italia</option>
+                    <option value="ma">Marruecos</option>
+                </select>
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="inscripcion">Fecha de inscripción:</label>
+                <input class="formulario-flex__input" type="date" id="inscripcion" name="inscripcion" min="2026-01-01" max="2027-01-01" />
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="email">Correo electrónico:</label>
+                <input class="formulario-flex__input" type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="telefono">Teléfono:</label>
+                <input class="formulario-flex__input" type="tel" id="telefono" name="telefono" placeholder="+34 600 111 111" />
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="asunto">Asunto:</label>
+                <input class="formulario-flex__input" type="text" id="asunto" name="asunto" required />
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="mensaje">Mensaje:</label>
+                <textarea class="formulario-flex formulario-flex--textarea" id="mensaje" name="mensaje" rows="5" required spellcheck="true" maxlength="500"></textarea>
+                <!-- required spellcheck="true" true es es valor por defecto u omitido que resalta los errores ortográficos. 
+                El atributo cols especifica el número de columnas visibles en un elemento <textarea>. Actualmente, no es compatible con HTML5, pero se puede usar para especificar el ancho del área de texto. En su lugar se recomienda usar CSS para controlar el ancho del área de texto. cols es un atributo obsoleto o relicto y no se recomienda su uso. 
+                -->
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="cursos">Cursos que solicita:</label>
+                <select class="formulario-flex__input" name="cursos[]" id="cursos" multiple size="4">
+                    <optgroup label="Desarrollo Web">
+                        <option value="php">PHP</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </optgroup>
+                    <optgroup label="Ofimática">
+                        <option value="word">Word</option>
+                        <option value="excel">Excel</option>
+                        <option value="powerpoint">PowerPoint</option>
+                        <option value="access">Access</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <fieldset class="formulario-flex__grupo--checks" aria-labelledby="titulo-lenguajes">
+                <legend id="titulo-lenguajes">¿Qué lenguajes conoce?</legend>
+
+                <div role="group" aria-labelledby="grupo-html">
+                    <input type="checkbox" name="lenguajes[]" value="HTML" id="html" />
+                    <label id="grupo-html" for="html">HTML</label>
+                </div>
+
+                <div role="group" aria-labelledby="grupo-css">
+                    <input type="checkbox" name="lenguajes[]" value="CSS" id="css" />
+                    <label id="grupo-css" for="css">CSS</label>
+                </div>
+
+                <div role="group" aria-labelledby="grupo-js">
+                    <input type="checkbox" name="lenguajes[]" value="JavaScript" id="javascript" />
+                    <label id="grupo-js" for="javascript">JavaScript</label>
+                </div>
+            </fieldset>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="experiencia">Nivel de experiencia:</label>
+                <input class="formulario-flex__input" type="range" id="experiencia" name="experiencia" min="0" max="10" />
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="color-preferido">Te regalamos una camiseta personalizada. Elige un color preferido:</label>
+                <input class="formulario-flex__input--color" type="color" id="color-preferido" name="color-preferido" value="#1e88e5" />
+            </div>
+
+            <fieldset>
+                <legend>Forma de pago:</legend>
+                <div class="formulario-flex__grupo--radio" aria-labelledby="grupo-efectivo">
+                    <input class="formulario-flex__input" type="radio" id="efectivo" name="pago" value="efectivo" />
+                    <label class="formulario-flex__label--radio" for="efectivo" id="grupo-efectivo">Efectivo</label>
+                </div>
+
+                <div class="formulario-flex__grupo--radio" aria-labelledby="grupo-tarjeta">
+                    <input class="formulario-flex__input" type="radio" id="tarjeta" name="pago" value="tarjeta" />
+                    <label class="formulario-flex__label--radio" for="tarjeta" id="grupo-tarjeta">Tarjeta</label>
+                </div>
+
+                <div class="formulario-flex__grupo--radio" aria-labelledby="grupo-transparencia">
+                    <input class="formulario-flex__input" type="radio" id="transferencia" name="pago" value="transferencia" />
+                    <label class="formulario-flex__label--radio" for="transferencia" id="grupo-transparencia">Transferencia</label>
+                </div>
+            </fieldset>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="archivo">Adjuntar archivo:</label>
+
+                <input class="formulario-flex__input" type="file" name="archivo" id="archivo" accept=".pdf,.docx,.png" />
+            </div>
+
+            <div class="formulario-flex__grupo formulario-flex__grupo--boton">
+                <button class="formulario-flex__boton" type="submit">Enviar</button>
+            </div>
+            <div class="formulario-flex__grupo--boton">
+                <button class="formulario-flex__boton" type="submit"></button>
+            </div>
+
+            <div class="formulario-flex__grupo">
+                <label class="formulario-flex__label" for="referencia">Número de referencia del formulario:</label>
+                <input class="formulario-flex__input" type="text" name="referencia" id="referencia" value="034234" disabled="disabled" />
+            </div>
+        </form>
+    </body>
+</html>

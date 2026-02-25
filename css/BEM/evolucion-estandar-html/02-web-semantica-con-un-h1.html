@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ejemplo de Página Semántica</title>
+        <style>
+            /* =========================================================
+   Reglas:
+   - Solo selectores de elemento (se permiten combinadores).
+   - Tonos claros.
+   - Animaciones sutiles.
+   - No se altera el HTML.
+   ========================================================= */
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html {
+                color-scheme: light;
+            }
+
+            body {
+                margin: 0;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    "Segoe UI",
+                    Roboto,
+                    Arial,
+                    sans-serif;
+                line-height: 1.65;
+                letter-spacing: 0.2px;
+                background: radial-gradient(1200px 600px at 10% 0%, rgba(99, 102, 241, 0.1), transparent 60%), radial-gradient(900px 500px at 90% 10%, rgba(16, 185, 129, 0.1), transparent 60%), linear-gradient(180deg, #f8fafc, #eef2f7);
+                color: #1f2933;
+                min-height: 100vh;
+            }
+
+            /* Contenedores principales */
+
+            header,
+            nav,
+            main,
+            footer {
+                width: min(1100px, calc(100% - 2.5rem));
+                margin-inline: auto;
+            }
+
+            /* =========================================================
+   Header
+   ========================================================= */
+
+            header {
+                padding: 2.5rem 0 1.5rem 0;
+                animation: fade-down 700ms ease-out both;
+            }
+
+            header > h1 {
+                margin: 0;
+                padding: 1.25rem 1.5rem;
+                font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.4rem);
+                font-weight: 800;
+                letter-spacing: 0.3px;
+                color: #0f172a;
+                background: rgba(255, 255, 255, 0.75);
+                border-radius: 1rem;
+                box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            }
+
+            /* =========================================================
+   Navegación
+   ========================================================= */
+
+            nav {
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                padding: 0.75rem 0;
+                background: rgba(248, 250, 252, 0.85);
+                border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            }
+
+            nav > ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+
+            nav > ul > li {
+                margin: 0;
+            }
+
+            nav a {
+                display: inline-block;
+                padding: 0.55rem 0.9rem;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 500;
+                color: #334155;
+                background: rgba(255, 255, 255, 0.6);
+                border: 1px solid rgba(15, 23, 42, 0.1);
+                transition:
+                    transform 160ms ease,
+                    background-color 160ms ease,
+                    box-shadow 160ms ease;
+            }
+
+            nav a:hover {
+                transform: translateY(-1px);
+                background: #ffffff;
+                box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+            }
+
+            nav a:focus-visible {
+                outline: 3px solid rgba(99, 102, 241, 0.45);
+                outline-offset: 3px;
+            }
+
+            /* =========================================================
+   Contenido principal
+   ========================================================= */
+
+            main {
+                padding: 2rem 0 2.5rem 0;
+                animation: fade-up 700ms ease-out both;
+            }
+
+            p {
+                max-width: 75ch;
+                margin: 0 0 1.2rem 0;
+                color: #334155;
+            }
+
+            code {
+                font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+                font-size: 0.95em;
+                padding: 0.15em 0.4em;
+                border-radius: 0.4em;
+                background: rgba(15, 23, 42, 0.05);
+                border: 1px solid rgba(15, 23, 42, 0.1);
+                color: #0f172a;
+            }
+
+            /* =========================================================
+   Secciones
+   ========================================================= */
+
+            section {
+                margin: 2rem 0;
+                padding: 1.4rem 1.5rem 1.2rem 1.5rem;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 1.1rem;
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+                transition:
+                    transform 220ms ease,
+                    box-shadow 220ms ease;
+            }
+
+            section:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+            }
+
+            section > h2 {
+                margin: 0 0 0.9rem 0;
+                font-size: 1.45rem;
+                font-weight: 700;
+                color: #0f172a;
+                padding-bottom: 0.4rem;
+                border-bottom: 2px solid rgba(99, 102, 241, 0.25);
+            }
+
+            /* =========================================================
+   Artículos
+   ========================================================= */
+
+            article {
+                margin: 1.2rem 0 0 0;
+                padding: 1rem 1.1rem;
+                border-radius: 0.9rem;
+                background: linear-gradient(180deg, #ffffff, #f8fafc);
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+                transition: transform 200ms ease;
+            }
+
+            article:hover {
+                transform: translateY(-1px);
+            }
+
+            article > h3 {
+                margin: 0 0 0.5rem 0;
+                font-size: 1.05rem;
+                font-weight: 650;
+                color: #1e293b;
+            }
+
+            /* =========================================================
+   Footer
+   ========================================================= */
+
+            footer {
+                padding: 1.5rem 0 2.5rem 0;
+                border-top: 1px solid rgba(15, 23, 42, 0.1);
+            }
+
+            footer p {
+                margin: 0;
+                color: #475569;
+            }
+
+            /* =========================================================
+   Animaciones
+   ========================================================= */
+
+            @keyframes fade-down {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fade-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* =========================================================
+   Movimiento reducido
+   ========================================================= */
+
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    animation-duration: 1ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 1ms !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <!-- + h1 -->
+            <h1>Mi Sitio Web Semántico</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre mí</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <p>Esta estructura, basada íntegramente en etiquetas semánticas de HTML5 (<code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code>), corresponde a una forma de maquetar muy propia de la era post‑HTML4, cuando ya no se recurría a <code>div</code> con <code>id="header"</code> o <code>id="menu"</code> para la estructura principal.</p>
+
+            <p>Una fecha razonable para situar esta técnica de forma habitual en desarrolladores “corrientes” sería aproximadamente entre 2014 y la actualidad</p>
+            <!-- + SECCIÓN "Sobre mí" -->
+
+            <section id="sobre">
+                <!-- + h2 -->
+                <h2>Sobre Mí</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin non risus non tortor maximus pretium.</p>
+            </section>
+
+            <!-- + SECCIÓN  "Blog" -->
+
+            <section id="blog">
+                <!-- + h2 -->
+                <h2>Últimos Artículos</h2>
+
+                <!-- * ARTICULO -->
+                <article>
+                    <!-- + h3 -->
+                    <h3>Artículo 1: Introducción al HTML5</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget diam id enim dapibus sagittis vitae ac lorem.</p>
+                </article>
+
+                <!-- * ARTICULO -->
+                <article>
+                    <!-- + h3 -->
+                    <h3>Artículo 2: CSS Moderno y Responsive</h3>
+
+                    <p>Curabitur vulputate sem quis dolor dapibus, non commodo augue sollicitudin. Fusce id diam varius, efficitur magna ut, dictum elit.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Mi Sitio Web Semántico. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

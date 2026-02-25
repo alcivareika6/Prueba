@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Selectores de atributos</title>
+        <style>
+            slectores de tipo [Atributos]
+            {
+                color: rgb(80, 0, 0);
+            }
+                
+                /* selectores de tipo de [atributos = "valor"] */
+                [id= "dos"] {
+                 background-color: #830000;
+                 color:#000000
+                }
+
+                .li-normal{
+                    color: rgb(2, 2, 2);
+                }
+                /* selectores de tipo [atributos~= "valor"] 
+                selecciona elementos del html que tienen un atributo cuyo valor contiene una palabra concreta.
+                */
+                [class~="li-especial"]{
+                    background-color: #690202;
+                }
+
+                /* Selectores de tipo [atributo |= "valor"]
+                Seleciona elementos del html con atributos en los que el valor empieza por un texto determinado. 
+                */
+                [lang |=]
+                
+                
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>selectores de atributos</h1>
+        </header>
+        <main>
+            <section>
+                <h2>[atributos]</h2>
+                <!--!No deberiamos emplear borde-->
+                <table border="1">
+                    <caption>
+                        km por empleado
+                    </caption>
+                    <thead>
+                        <td></td>
+                        <th>Enero</th>
+                        <th>Febrero</th>
+                        <th>Marzo</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                           <th>pedro</th>
+                           <td colspan="3">0km</td>
+                        </tr>
+                    </tr>
+                    <th>Maria</th>
+                    <td>250km</td>
+                    <td>100km</td>
+                    <td>0km</td>
+                    <tr>
+                </tbody>
+                    <tfoot></tfoot>
+                </table>
+            </section>
+            <section>
+                <h2>[Abributos="valor"]</h2>
+                <ol>
+                    <li id="uno">UNO</li>
+                    <li id="dos">DOS</li>
+                    <li id="tres">TRES</li>
+                </ol>
+            </section>
+            <section>
+                <h2>[atributos] ~= "valor"</h2>
+              <ul>
+                <li class="li-normal li-especial">UNO</li>
+                <li class="li-normal">DOS</li>
+                <li class="li-especial li-normal">TRES</li>
+              </ul>
+            </section>
+            <section>
+                <h2>[atributos|="valor"]</h2>
+                <P> En frances, un <spain lang="fr-FR">chien</spain>se dice chien y en Quebec es un <spain lang="fr-FR"></spain> pitou.</P>
+            </section>
+            <section></section>
+            <section></section>
+            <section></section>
+        </main>
+        <footer></footer>
+    </body>
+</html>

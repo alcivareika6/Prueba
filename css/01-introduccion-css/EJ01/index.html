@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/style/style.CSS" />
+        <title>Insertar estilos CSS</title>
+        <style>
+            strong {
+                background-color: #ff0;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Métodos de inserción de estilos CSS</h1>
+            <!--* Corresponde a los siguientes 1, 2, y 3 de la plataforma (curso azul)--
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#seccion-1">Estilos embebidos</a></li>
+                <li><a href="#seccion-2">Estilos en la Paginas</a></li>
+                <li><a href="#seccion-3">Esteilos externos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <p>Existen tres métodos para insertar estilos CSS en una página web.</p>
+            <section id="seccion-1">
+                <h2>CSS embebido dentro de elementos</h2>
+                <p>Este método no es nada recomendado.</p>
+                <p style="color: red">Este párrafo tiene CSS embebido.</p>
+            </section>
+            <section id="seccion-2">
+                <h2>CSS en la cabecera de la página HTML</h2>
+                <p>Este párrafo tiene un <strong>fragmento</strong> destacado.</p>
+            </section>
+            <section id="seccion-3">
+                <h2>Estilos CSS externos</h2>
+                <p>Ubicamos los estilos CSS en un archivo independiente. De este modo podemos compartir los mismos estilos en diferentes páginas web.</p>
+                <p>Este texto tiene un <em>énfasis débil</em>.</p>
+            </section>
+        </main>
+        <footer>ERIKA</footer>
+    </body>
+</html>

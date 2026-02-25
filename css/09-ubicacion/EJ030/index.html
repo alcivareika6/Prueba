@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamiento absoluto en elementos en línea</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Posicionamiento absoluto en elementos en línea</code></h1>
+  </header>
+  <main>
+    <section class="contenedor">
+      <h2>Elemento en línea sin posicionamiento absoluto</h2>
+      <p>
+        Cuando un elemento en línea no está posicionado mediante <code>position: absolute;</code>, no admite medidas.
+      </p>
+
+      <span class="span-1">Soy el span-1. Soy un elemento en línea y, como tal, no admito medidas (<code>width</code>/<code>height</code>).</span>
+    </section>
+
+    <section class="contenedor">
+      <h2>Elemento en línea con posicionamiento absoluto</h2>
+      <p>
+        Cuando un elemento está posicionado mediante <code>position: absolute;</code>, admite medidas incluso cuando
+        dicho elemento es en línea.
+      </p>
+
+      <span class="span-2">Soy el span-2. Soy un elemento en línea. Con <code>position: absolute;</code>, sí que admito
+        medidas.</span>
+    </section>
+
+  </main>
+  <footer>
+    Curso CSS
+  </footer>
+</body>
+
+</html>

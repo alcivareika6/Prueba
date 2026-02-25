@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Apilamiento por tansparencia</title>
+        <link rel="stylesheet" href="assets/style/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Apilamiento por tansparencia</h1>
+        </header>
+        <main>
+            <section class="caso-1">
+                <h3>CASO 1</h3>
+                <p>La caja roja está posicinada y queda por encima del contenedor blanco que no lo está.</p>
+                <div class="caja-roja">
+                    <p>
+                        <strong>Soy una caja roja</strong><br />
+                        Estoy posicionada, es lo que me coloca por encima en el orden de apilamiento.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque numquam ipsam molestiae sed accusamus.</p>
+                </div>
+                <div class="caja-blanca">
+                    <p>
+                        <strong>Soy una caja blanca</strong><br />
+                        No estoy posicionada ni tengo transparencia.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis, vitae quos explicabo molestias nisi veritatis doloremque totam minima, officia quam enim cupiditate id. Itaque neque nobis amet ducimus tempora!</p>
+                </div>
+            </section>
+
+            <section class="caso-2">
+                <h3>CASO 2</h3>
+                <p>El orden de apilamiento se ve alterado por la transparencia del contenedor.</p>
+                <div class="caja-roja">
+                    <p>
+                        <strong>Soy una caja roja</strong><br />
+                        Estoy posicionada.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque numquam ipsam molestiae sed accusamus.</p>
+                </div>
+                <div class="caja-blanca">
+                    <p>
+                        <strong>Soy una caja blanca</strong><br />
+                        No estoy posicionada, pero tengo transparencia. La transparencia me posiciona por encima de la caja roja.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis, vitae quos explicabo molestias nisi veritatis doloremque totam minima, officia quam enim cupiditate id. Itaque neque nobis amet ducimus tempora!</p>
+                </div>
+            </section>
+
+            <section class="caso-3">
+                <h3>CASO 3</h3>
+                <p>Incluso con una mínima transparencia en el contenedor blanco, el orden de apilamiento se ve alterado.</p>
+                <div class="caja-roja">
+                    <p>
+                        <strong>Soy una caja roja</strong><br />
+                        Estoy posicionada.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque numquam ipsam molestiae sed accusamus.</p>
+                </div>
+
+                <div class="caja-blanca">
+                    <p>
+                        <strong>Soy una caja blanca</strong>
+                        No estoy posicionada, pero tengo una chispirritina de transparencia. La suficiente transparencia para posicionarme por encima de la caja roja.
+                    </p>
+                    <p>Soy un párrafo en el contenedor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, omnis, vitae quos explicabo molestias nisi veritatis doloremque totam minima, officia quam enim cupiditate id. Itaque neque nobis amet ducimus tempora!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>Curso CSS</footer>
+    </body>
+</html>

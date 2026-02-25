@@ -1,0 +1,73 @@
+/* Estilos para el body */
+body {
+    margin: 0;
+    background-color: dimgray;
+    color: white;
+}
+
+/* Estilos header */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: brown;
+}
+
+/* Estilos h1 */
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Estilos de main */
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contenedor-rojo,
+.contenedor-verde {
+    width: 500px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.contenedor-verde {
+    /* ! FONDO TRANSPARENTE */
+    background-color: rgb(17, 101, 21, 0.8);
+}
+
+.caja-azul,
+.caja-amarilla {
+    position: relative;
+    left: 380px;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 1px solid white;
+    background-color: rgb(22, 24, 174);
+    color: white;
+}
+
+.caja-azul {
+    background-color: rgb(22, 24, 174);
+}
+
+/* CASO: MÉTODO 1 (NO FUNCIONA) */
+.contenedor-rojo {
+    background-color: brown;
+    /* No esposible colocar al padre por encima del hijo */
+}
+
+/* CASO: MÉTODO 2 (SÍ FUNCIONA) */
+.caja-amarilla {
+    background-color: rgb(213, 222, 46);
+    color: black;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: brown;
+}

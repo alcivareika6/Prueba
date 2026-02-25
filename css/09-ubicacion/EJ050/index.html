@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción a z-index</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Introducción a z-index</code></h1>
+  </header>
+  <main>
+
+    <section>
+      <div class="caja caja-roja caja-1">
+        <strong>Soy la caja 1</strong> | <code>z-index</code> omitido. Equivale a <code>z-index = auto</code>. <br>
+        Mi orden de apilamiento no se ve modificado.
+      </div>
+      <div class="caja caja-blanca caja-2">
+        <strong>Soy la caja 2</strong> | <code>z-index</code> omitido. Equivale a <code>z-index = auto</code>. <br>
+        Mi orden de apilamiento no se ve modificado. Estoy encima de la caja 1 porque aparezco después en el HTML. Es mi
+        orden de apilamiento natural.
+      </div>
+    </section>
+
+    <section>
+      <div class="caja caja-roja caja-3">
+        <strong>Soy la caja 3</strong> | <code>z-index = 1</code><br>
+        A pesar de mi <code>z-index</code>, mi orden de apilamiento no está modificado. Esto se debe a que no soy un elemento posicionado. <code>z-index</code> no tiene efecto sobre elementos no posicionados.
+      </div>
+      <div class="caja caja-blanca caja-4">
+        <strong>Soy la caja 4</strong> | <code>z-index</code> omitido. Equivale a <code>z-index = auto</code>. <br>
+        Mi orden de apilamiento no se ve modificado.
+      </div>
+    </section>
+
+    <section>
+      <div class="caja caja-roja caja-5">
+        <strong>Soy la caja 5</strong> | <code>z-index = 1</code><br>
+        Mi orden de apilamiento está modificado. Estoy encima de la caja 6 porque tengo un <code>z-index</code> diferente de auto y superior al de la caja 6. Además cumplo la condición necesaria de ser un elemento posicionado (<code>position: relative;</code>). Si no estuviera posicionado no tendría efecto mi <code>z-index</code>.
+      </div>
+      <div class="caja caja-blanca caja-6">
+        <strong>Soy la caja </strong>6 | <code>z-index</code> omitido. Equivale a <code>z-index = auto</code>. <br>
+        Mi orden de apilamiento se ve modificado por el <code>z-index</code> de la caja-5.
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    Curso CSS
+  </footer>
+</body>
+
+</html>

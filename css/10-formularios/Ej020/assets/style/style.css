@@ -1,0 +1,160 @@
+:root {
+    --color-primario: #3366ff;
+    --color-secundario: rgb(240, 240, 240);
+    --color-texto: hsl(210, 10%, 20%);
+}
+
+.formulario-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 420px;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+}
+
+.formulario-flex__grupo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formulario-flex__grupo--checks {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-flex__grupo--radio {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 250px;
+    padding: 10px 50px;
+}
+
+.formulario-flex__grupo--checks {
+    padding: 10px 50px;
+}
+
+.formulario-flex__label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.formulario-flex__label--radio {
+    position: relative;
+    top: 2px;
+}
+
+.formulario-flex__input {
+    box-sizing: border-box;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formulario-flex__input {
+    min-width: 150px;
+}
+
+.formulario-flex__input--color {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* 
+    El <input type="color"> no es una caja HTML normal. Internamente el navegador lo compone mediante subelementos privados, que pueden exponerse a CSS mediante pseudo-elementos específicos.
+
+        En WebKit/Blink existen, entre otros:
+            ::-webkit-color-swatch-wrapper
+            ::-webkit-color-swatch
+
+    Estos no forman parte del DOM ni son seleccionables con CSS estándar.
+*/
+
+/* Contenedor interno que envuelve la muestra de color (“swatch”) */
+.formulario-flex__input--color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+/* Pieza visible real que muestra el color seleccionado */
+.formulario-flex__input--color::-webkit-color-swatch {
+    border: 0;
+    border-radius: 0;
+}
+
+.formulario-flex--textarea {
+    resize: vertical;
+}
+
+.formulario-flex__grupo--boton {
+    justify-content: center;
+}
+
+.formulario-flex__boton {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #1e88e5;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-flex__boton:hover,
+.formulario-flex__boton:focus {
+    background-color: #1565c0;
+}
+
+/* + Orden funcional recomendado (bloques lógicos):
+Propuesto por Harry Roberts (https://cssguidelin.es/)
+
+En equipos de trabajo grandes facilita la lectura, consistencia y mantenibilidad del código. Es recomendable seguir un orden funcional para mejorar la legibilidad y el mantenimiento del código CSS. Este orden puede variar según las preferencias del equipo, pero una sugerencia común es:
+
+*/
+selector {
+    /* 1. Posicionamiento */
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    /* 2. Caja (modelo de caja) */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #c90404;
+    background-color: #d83204;
+
+    /* 4. Visual (estética) */
+    color: #333;
+
+    /* 3. Tipografía */
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    /* 5. Miscelánea */
+    transition: all 0.3s ease;
+    
+}
+.formulario-flex__boton{
+    padding:0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(0, 31, 116);
+    color:#ccc
+    
+}
