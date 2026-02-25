@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TABLAS AVANZADAS</title>
+        <style>
+            col:nth-child(1) {
+         background-color: blue;
+            }
+            col:nth-child(2) {color: #e73333;
+            }
+     
+
+        </style>
+        </head>
+    <body>
+        <header>
+            <h1>TABLAS AVANZADAS</h1>
+        </header>
+        <main>
+            <h2>Agrupar columnas</h2>
+            <table>
+                <caption>
+                    Ingresos y gastos
+                </caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thed>
+                <tr>
+                    <tbody>
+                        <th>Mes</th>
+                        <th>Ingresos</th>
+                        <th>Gastos</th>
+                        <th>Total</th>
+                </tr>
+                </thed>
+
+                </tbody>
+                <tr>
+                    <th>Enero</th>
+                    <td>300</td>
+                    <td>150</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <th>Febrero</th>
+                    <td>200</td>
+                    <td>50</td>
+                    <td>150</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td>500</td>
+                        <td>200</td>
+                        <td>300</td>
+                        
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+        <footer>Curso HTML</footer>
+    </body>
+</html>
