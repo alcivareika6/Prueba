@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Harry Potter</title>
+        <header>
+            <background-colorblue>// === SELECCIÓN DEL FORMATEADOR POR DEFECTO ===
+
+    // Indica a Visual Studio Code que Prettier será el formateador principal del editor.
+    // “esbenp.prettier-vscode” es el nombre técnico de la extensión oficial de Prettier.
+    // Esto asegura que, al usar "Formatear documento" o al guardar, VS Code use Prettier
+    // y no otro formateador (por ejemplo, el que viene integrado para HTML o CSS).
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // === FORMATEADOR ESPECÍFICO POR LENGUAJE ===
+
+    // En esta línea se indica que los archivos de tipo HTML también deben usar Prettier
+    // como formateador por defecto. Esto es útil porque algunos lenguajes
+    // (como HTML, CSS, JSON o Markdown) pueden tener su propio formateador interno
+    // y, sin esta línea, podrían no usar Prettier automáticamente.
+    "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+    // Lo mismo que el caso anterior, pero aplicado a archivos CSS.
+    // De este modo, cada vez que guardes un archivo .css, Prettier se encargará
+    // de aplicar el formato (indentación, comillas, espacios, etc.).
+    // Es una buena práctica definir el formateador explícitamente por tipo de archivo
+    // cuando trabajas con proyectos web que mezclan distintos lenguajes.
+    "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+    // === CONFIGURACIÓN DE FORMATEO EN VS CODE ===
+
+    // Activa el formateo automático al guardar cualquier archivo.
+    // Cada vez que presiones CTRL+S, VS Code aplicará el formato definido por Prettier.
+    "editor.formatOnSave": true,
+
+    // === OPCIONES DE PRETTIER ===
+
+    // Número máximo de caracteres por línea antes de que Prettier inserte un salto automático.
+    // Si se pone un valor tan alto (por ejemplo 10000), nunca dividirá las líneas.
+    // Esto puede ser útil si quieres mantener el código exactamente como lo escribes,
+    // pero hace que el archivo sea más difícil de leer en pantallas pequeñas.
+    "prettier.printWidth": 10000,
+
+    // Cantidad de espacios usados por cada nivel de sangría (indentación).
+    // Con 4 espacios el código se ve más separado y legible, pero ocupa más horizontalmente.
+    // En muchos proyectos web modernos se usa 2, aunque 4 es común en código educativo.
+    "prettier.tabWidth": 4,
+
+    // Indica que se usarán espacios en lugar de tabuladores.
+    // Esto evita que el código se desplace de forma distinta en cada editor,
+    // ya que el tamaño del tabulador varía entre programas.
+    "prettier.useTabs": false,
+
+    // Permite que Prettier también formatee el código embebido dentro del HTML.
+    // Por ejemplo: estilos CSS dentro de <style> o scripts JS dentro de <script>.
+    // Si se deja en "auto", Prettier decide cuándo aplicarlo según el tipo de contenido.
+    "prettier.embeddedLanguageFormatting": "auto",
+
+    // Controla cómo Prettier maneja los espacios en blanco dentro del HTML.
+    // El valor "css" hace que Prettier respete los espacios solo cuando son relevantes
+    // según las reglas de visualización de HTML. Esto significa que mantiene los espacios
+    // entre elementos en línea (como <span> o <a>), pero puede reorganizar o eliminar
+    // los saltos innecesarios entre elementos de bloque (como <div> o <p>).
+    // Es la opción más equilibrada, ya que conserva la apariencia visual del documento
+    // sin generar huecos o líneas adicionales en el código.
+    "prettier.htmlWhitespaceSensitivity": "css",
+    //NOTA: Prettier usa “css” como etiqueta interna, pero lo que realmente aplica son las reglas de presentación por defecto del HTML.
+
+    // Indica si cada atributo HTML debe escribirse en su propia línea.
+    // false → varios atributos pueden ir juntos en una sola línea.
+    // true  → cada atributo se pone en una línea distinta.
+    // Ejemplo con false:
+    //    <img src="foto.jpg" alt="Descripción" width="200">
+    // Ejemplo con true:
+    //    <img
+    //      src="foto.jpg"
+    //      alt="Descripción"
+    //      width="200"
+    //    >
+    "prettier.singleAttributePerLine": false,
+
+</background-colorblue>
+        </header>
+    <body>
+        <header>Inicio | Novelas | peliculas | Contactos</header>
+        <>
+            <h1>HARRY POTTER</h1>
+            <h2>Novelas</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia possimus aperiam dolores expedita sequi similique error excepturi inventore, placeat et vitae corrupti natus nesciunt quo atque cum provident laborum enim.</p>
+
+            <h3>Harry Potter y la piedra filosofal</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum veritatis voluptas saepe, hic pariatur unde qui non obcaecati. Suscipit perspiciatis, quis facilis enim architecto nostrum pariatur at incidunt magni reiciendis.</p>
+            <h4>Personajes</h4>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis autem saepe at quidem vel dignissimos quisquam. Reprehenderit ipsum modi tempore beatae? Nam earum aliquid assumenda itaque vel similique quisquam laborum.</p>
+
+            <h3>Reliquias de la muerte</h3>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas laborum sint quaerat cupiditate nesciunt eaque officia in laboriosam tenetur, perspiciatis veritatis ullam maxime autem perferendis culpa quasi quisquam error provident.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis pariatur architecto rem magni incidunt. Cum tenetur quaerat tempore quis dolorem voluptatibus quos qui, dolores esse, fuga blanditiis hic itaque rem.</p>
+            <>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sit iusto fugiat, quasi accusamus a quaerat, velit impedit nesciunt dolores eum veritatis quia, nisi id possimus quibusdam culpa doloremque dicta.</h4>
+             
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo minus corrupti a officia vel repellendus at! Suscipit temporibus cum soluta officia quos accusantium, fugiat tempora eaque aliquid autem qui explicabo.
+        </h4>
+        <footer>El Mundo Fantastico De Harry Potter</footer>
+
+    </body>
+</html>
